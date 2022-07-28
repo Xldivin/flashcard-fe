@@ -21,23 +21,18 @@ const Driverlayout=({})=> {
     },
     {
       id:2,
-      question: "what is 6+6",
+      question: "what is 2+2",
       answer:"the answer is four",
       description: "mathematics",
     },
-    {
-      id:3,
-      question: "what is 5=5",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
+    
   ]
   const [card, setflashcards] = useState<IState["card"]>(flashcard)
 	return (
 		<div className="">
 			<main className="">
-			<h3 className="">Flash-Card-App</h3>
-      <Card card={card} />
+			<h3 className="title">Flash-Card-App</h3>
+      <Card card={card}/>
 			</main>
 		</div>
 	);

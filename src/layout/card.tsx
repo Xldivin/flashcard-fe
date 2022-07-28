@@ -12,10 +12,10 @@ interface IProps {
 const Card:React.FC<IProps> = ({card}) => {
   const [flip, setFlip] = useState(false)
   return (
-    <div className={`${flip ? 'flip':''}`} onClick={() => setFlip(!flip)}>
+    <div>
       {card.map(car=>{
         return(
-            <div className='card'>
+            <div className={`card ${flip ? 'flip' : ''}`}onClick={() => setFlip(!flip)} key={car.id}>
                 <div className='front'>
                 <p>{car.id}</p>
                 <h2>{car.question}</h2>
@@ -31,7 +31,7 @@ const Card:React.FC<IProps> = ({card}) => {
             </div>
         )
       })}
-    </div>
+      </div> 
   )
 }
 

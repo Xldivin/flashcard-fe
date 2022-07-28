@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-top: 5em;
+  margin-left: 2rem;
   align-items: center;
   position: relative;
   border-radius: .25rem;
@@ -41,4 +42,8 @@ padding: 1rem;
 .buttons{
 display: flex;
 justify-content: space-between;
+}
+.title{
+  text-align: center;
+  text-decoration: underline;
 }
