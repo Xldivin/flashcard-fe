@@ -1,12 +1,17 @@
 body {
-  background-color: #C8D0D2;
+  background-color: #4338ca;
   /* margin: 0; */
+}
+.card-grid{
+  display: grid;
+  align-items:flex-start;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  justify-content: space-between;
+  grid-gap: 50px;
 }
 .card {
   display: flex;
   justify-content: flex-end;
-  margin-top: 5em;
-  margin-left: 2rem;
   align-items: center;
   position: relative;
   border-radius: .25rem;
@@ -18,7 +23,6 @@ body {
   transition: 150ms;
   cursor: pointer;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
-
 }
 .card:hover {
   --translate-y: -2px;
@@ -46,4 +50,11 @@ justify-content: space-between;
 .title{
   text-align: center;
   text-decoration: underline;
+  color: white;
+}
+.delete{
+  background-color: #be123c;
+}
+.update{
+  background-color: #0f766e;
 }

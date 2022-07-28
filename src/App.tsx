@@ -25,7 +25,54 @@ const Driverlayout=({})=> {
       answer:"the answer is four",
       description: "mathematics",
     },
-    
+    {
+      id:3,
+      question: "what is 2+2",
+      answer:"the answer is four",
+      description: "mathematics",
+    },
+    {
+      id:4,
+      question: "what is 2+2",
+      answer:"the answer is four",
+      description: "mathematics",
+    },
+    {
+      id:5,
+      question: "what is 2+2",
+      answer:"the answer is four",
+      description: "mathematics",
+    },
+    {
+      id:6,
+      question: "what is 2+2",
+      answer:"the answer is four",
+      description: "mathematics",
+    },
+    {
+      id:7,
+      question: "what is 2+2",
+      answer:"the answer is four",
+      description: "mathematics",
+    },
+    {
+      id:8,
+      question: "what is 2+2",
+      answer:"the answer is four",
+      description: "mathematics",
+    },
+    {
+      id:9,
+      question: "what is 2+2",
+      answer:"the answer is four",
+      description: "mathematics",
+    },
+    {
+      id:10,
+      question: "what is 2+2",
+      answer:"the answer is four",
+      description: "mathematics",
+    },
   ]
   const [card, setflashcards] = useState<IState["card"]>(flashcard)
 	return (
