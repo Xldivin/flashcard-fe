@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import Card from "./layout/card";
+import Cardlist from "./layout/cardlist";
 import "./App.css"
+import { Link } from "react-router-dom"
+import { AiOutlineLogout } from 'react-icons/ai';
+import { GrAddCircle } from 'react-icons/gr'
 
 interface IState {
   card:{
@@ -78,8 +81,16 @@ const Driverlayout=({})=> {
 	return (
 		<div className="">
 			<main className="">
+      <div className="log">
+        <Link to="/signup" className="link1">
+        Add Card
+        </Link>
+        <Link to="/signup" className="link">
+        Logout <AiOutlineLogout/>
+        </Link>
+      </div>
 			<h3 className="title">Flash-Card-App</h3>
-      <Card card={card}/>
+      <Cardlist card={card}/>
 			</main>
 		</div>
 	);

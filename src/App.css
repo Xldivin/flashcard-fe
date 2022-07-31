@@ -4,7 +4,7 @@ body {
 }
 .card-grid{
   display: grid;
-  align-items:flex-start;
+  align-items:center;
   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
   justify-content: space-between;
   grid-gap: 50px;
@@ -57,4 +57,187 @@ justify-content: space-between;
 }
 .update{
   background-color: #0f766e;
+}
+.log{
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  margin-right: 2rem;
+}
+.link{
+  text-decoration: none;
+  color: aliceblue;
+  margin-top: 2rem;
+}
+.add{
+  color: aliceblue;
+}
+.link1{
+  text-decoration: none;
+  color: aliceblue;
+  margin-left: 80rem;
+  margin-top: 2rem;
+}
+.welcome{
+  text-align: center;
+  margin-top: 10em;
+  font-size: 35px;
+  color: wheat;
+}
+.welcome2{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80px;
+  justify-content: space-between;
+}
+.button1{
+  background-color: white;
+  width: 10em;
+  margin-left: 55em;
+  border-radius: 20em;
+  height: 2em;
+}
+.button2{
+  background-color: white;
+  width: 10em;
+  margin-left: 55em;
+  border-radius: 20em;
+  height: 2em;
+}
+.form{
+  background-color: white;
+  width: 30em;
+  height: 25em;
+  margin-left: 35em;
+  margin-top: 15em;
+  text-align: center;
+}
+.form2{
+  background-color: white;
+  width: 30em;
+  height: 33em;
+  margin-left: 35em;
+  margin-top: 10em;
+  text-align: center;
+}
+.login{
+  position: relative;
+  top: 2em;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: bold;
+}
+.input1{
+  margin-top: 5em;
+  margin-left: 4.5rem;
+  width: 25em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.input2{
+  margin-top: 2em;
+  margin-left: 4.5rem;
+  width: 25em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.signup{
+  margin-left: -10rem;
+  color: #4338ca;
+  text-decoration: none;
+}
+.loginbutton{
+  width: 30em;
+  margin-top: 2em;
+  height: 2rem;
+  background-color: #4338ca;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+.signuplink{
+  text-decoration: none;
+}
+.input3{
+  margin-top: 5em;
+  margin-left: 4.5rem;
+  width: 25em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.input4{
+  margin-top: 2em;
+  margin-left: 4.5rem;
+  width: 25em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.input5{
+  margin-top: 2em;
+  margin-left: 4.5rem;
+  width: 25em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.input6{
+  margin-top: 2em;
+  margin-left: 4.5rem;
+  width: 25em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.buttonlogin1{
+text-decoration: none;
+}
+.add-form{
+  background-color: white;
+  width: 55em;
+  text-align: center;
+  margin-left: 25em;
+  margin-top: 10em;
+  height: 30em;
+}
+.input7{
+  margin-top: 2em;
+  margin-left: 9rem;
+  width: 45em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.input8{
+  margin-top: 2em;
+  margin-left: 9rem;
+  width: 45em;
+  height: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.input9{
+  margin-top: 2em;
+  margin-left: 9rem;
+  width: 45em;
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+}
+.button-card{
+  background-color: #4338ca;
+  color: white;
+  width: 8rem;
+  border-radius: 2rem;
+  height: 2rem;
+}
+.title-card{
+  text-decoration: underline;
+}
+.red{
+  color: #991b1b;
 }
