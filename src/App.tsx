@@ -3,7 +3,6 @@ import Cardlist from "./layout/cardlist";
 import "./App.css"
 import { Link } from "react-router-dom"
 import { AiOutlineLogout } from 'react-icons/ai';
-import { GrAddCircle } from 'react-icons/gr'
 
 interface IState {
   card:{
@@ -15,69 +14,6 @@ interface IState {
 }
 
 const Driverlayout=({})=> {
-  const flashcard =[
-    {
-      id:1,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:2,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:3,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:4,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:5,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:6,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:7,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:8,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:9,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-    {
-      id:10,
-      question: "what is 2+2",
-      answer:"the answer is four",
-      description: "mathematics",
-    },
-  ]
-  const [card, setflashcards] = useState<IState["card"]>(flashcard)
 	return (
 		<div className="">
 			<main className="">
@@ -90,7 +26,7 @@ const Driverlayout=({})=> {
         </Link>
       </div>
 			<h3 className="title">Flash-Card-App</h3>
-      <Cardlist card={card}/>
+      <Cardlist/>
 			</main>
 		</div>
 	);

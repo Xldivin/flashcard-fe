@@ -1,9 +1,21 @@
 import { Formik } from 'formik'
 import * as Yup from "yup"
+import { ADD_CARD } from '../lib/cardMutation'
+import { useMutation } from "@apollo/client";
+import React, { useState } from 'react';
 
 function AddCard() {
+  const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
+  const [description, setDescription] = useState("");
+  
+  const [saveCard, { error, data }] = useMutation(ADD_CARD, {
+    variables: {description, question, answer}
+  });
   return (
     <div>
+      {error ? <p>Oh no! {error.message}</p> : null}
+      {data && data.card ? <p>Saved!</p> : null}
         <Formik
         initialValues={{
             question:"",
@@ -22,10 +34,16 @@ function AddCard() {
             .required('Answer Is Required'),
         })}
         onSubmit={(values) =>{
-            alert(JSON.stringify(values))
+          if (question === '' || description === '' || answer === '') {
+            return alert('Please fill in all fields')
+          }
+          saveCard()
+          setAnswer('')
+          setDescription('')
+          setQuestion('')
           }}
         >
-        {({handleChange,values,handleSubmit,handleBlur,errors,touched}) => (
+        {({handleChange,values,handleSubmit,handleBlur,errors,touched,handleReset}) => (
             <form className='add-form' onSubmit={handleSubmit}>
             <h3 className='title-card'>Add Cards</h3>
             <input
@@ -62,7 +80,7 @@ function AddCard() {
             <br />
             <br />
             <br />
-            <button className='button-card'>Add Card</button>
+            <button className='button-card'type='submit'>Add Card</button>
         </form>
         )}
         </Formik>

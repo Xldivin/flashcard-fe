@@ -8,12 +8,15 @@ import Firstpage from './routes/Firstpage';
 import Login from './routes/login';
 import AddCard from './routes/AddCard';
 import reportWebVitals from './reportWebVitals';
+import client from './lib/apolloClient';
+import { ApolloProvider } from "@apollo/client"
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <BrowserRouter>
+   <ApolloProvider client={client}>
   <Routes>
   <Route path='/'element={<Firstpage />} />
   <Route path="/cards" element={<App />} />
@@ -21,6 +24,7 @@ root.render(
   <Route path='/login'element={<Login />} />
   <Route path='/addcard'element={<AddCard />} />
   </Routes>
+  </ApolloProvider>
   </BrowserRouter>
 );
 
