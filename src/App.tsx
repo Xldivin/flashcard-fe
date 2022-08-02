@@ -3,6 +3,7 @@ import Cardlist from "./layout/cardlist";
 import "./App.css"
 import { Link } from "react-router-dom"
 import { AiOutlineLogout } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 interface IState {
   card:{
@@ -14,16 +15,20 @@ interface IState {
 }
 
 const Driverlayout=({})=> {
+  const navigate = useNavigate();
 	return (
 		<div className="">
 			<main className="">
       <div className="log">
-        <Link to="/signup" className="link1">
+        <Link to="/addcard" className="link1">
         Add Card
         </Link>
-        <Link to="/signup" className="link">
+        <div className="link" onClick={()=>{
+          localStorage.removeItem("token");
+          navigate(`/`);
+        }}>
         Logout <AiOutlineLogout/>
-        </Link>
+        </div>
       </div>
 			<h3 className="title">Flash-Card-App</h3>
       <Cardlist/>

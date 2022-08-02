@@ -1,79 +1,57 @@
 import { Link } from "react-router-dom"
-import { Formik } from 'formik' 
-import * as Yup from "yup"
+import { useState } from 'react';
+import { SIGNUP_MUTATION } from "../lib/auth";
+import { useMutation } from "@apollo/client";
+import { useNavigate } from 'react-router-dom';
 
-function signup() {
-  interface FormModel{
-    username: string
-    email: string
-    password: string
-    password2: string
+function Signup() {
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [signup] = useMutation(SIGNUP_MUTATION, {
+    variables: {email,password,name},
+    onCompleted: ({ signup }) => {
+      localStorage.setItem("token", signup.token);
+      navigate('/cards');
+    }
+  });
+  const handleSubmit = (e:any) => {
+    e.preventDefault();
+    if (name === '' || email === '' || password === '') {
+      return alert('Please fill in all fields')
+    }
+    signup()
+    setName('')
+    setEmail('')
+    setPassword('')
+    alert("User Signed In")
   }
   return (
     <div>
-      <Formik<FormModel>
-      initialValues={{
-        username:"",
-        email:"",
-        password:"",
-        password2:""
-      }}
-      validationSchema={Yup.object().shape({
-        username: Yup.string()
-        .max(15, "Must be 15 characters or less")
-        .required('Username Required'),
-        email: Yup.string()
-            .email()
-            .required('Enter valid email-id'),
-        password: Yup.string()
-            .min(4, "Minimum of 4 Numbers")
-            .required("Password is Required"),
-        password2: Yup.string()
-            .min(4, "Minimum of 4 Numbers")
-            .required("Confirm Password is Required"),
-    })}
-      onSubmit={(values) => {
-        alert(JSON.stringify(values))
-      }}>
-      {({handleSubmit,values,handleChange,handleBlur,errors,touched}) =>(
               <form className='form2' onSubmit={handleSubmit}>
               <p className='login'>SIGNUP TO FLASH-CARD APP</p>
               <input
               className='input3'
               name="username"
               placeholder='Enter Your Username'
-              value={values.username}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               />
-              {errors.username && touched.username ? <span className="red">{errors.username}</span> : null}
               <input
               className='input4'
               name="email"
               placeholder='Enter Your Email Address'
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               />
-              {errors.email && touched.email ? <span className="red">{errors.email}</span> : null}
               <input
               className='input5'
               name="password"
               placeholder='Enter Your Password'
-              value={values.password}
-              onChange={handleChange}
-              onBlur={handleBlur}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               />
-              {errors.password && touched.password ? <span className="red">{errors.password}</span> : null}
-              <input
-              className='input6'
-              name="password2"
-              placeholder='Confirm Your Password'
-              value={values.password2}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              />
-              {errors.password2 && touched.password2 ? <span className="red">{errors.password2}</span> : null}
               <p className='signup'>
               <Link to="/login" className="signuplink">
                   Already have an account
@@ -82,10 +60,8 @@ function signup() {
               <br />
               <button className='loginbutton'>SignUp</button>
           </form>
-      )}
-      </Formik>
 </div>
   )
 }
 
-export default signup
+export default Signup
