@@ -65,12 +65,13 @@ padding: 1rem;
   display: flex;
   justify-content: space-between;
   text-align: right;
-  margin-right: 2rem;
+  margin-right: 5rem;
 }
 .link{
   text-decoration: none;
   color: aliceblue;
   margin-top: 2rem;
+
 }
 .add{
   color: aliceblue;
@@ -80,6 +81,7 @@ padding: 1rem;
   color: aliceblue;
   margin-left: 80rem;
   margin-top: 2rem;
+  margin-right: 5rem;
 }
 .welcome{
   text-align: center;
