@@ -7,7 +7,6 @@ import Signup from './routes/signup';
 import Firstpage from './routes/Firstpage';
 import Login from './routes/login';
 import AddCard from './routes/AddCard';
-import reportWebVitals from './reportWebVitals';
 import client from './lib/apolloClient';
 import { ApolloProvider } from "@apollo/client"
 
@@ -28,5 +27,3 @@ root.render(
   </ApolloProvider>
   </BrowserRouter>
 );
-
-reportWebVitals();

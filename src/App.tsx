@@ -20,15 +20,17 @@ const Driverlayout=({})=> {
 		<div className="">
 			<main className="">
       <div className="log">
-        <Link to="/addcard" className="link1">
+        <button className="link1">
+        <Link to="/addcard" className="button-add">
         Add Card
         </Link>
-        <div className="link" onClick={()=>{
+        </button>
+        <button className="link" onClick={()=>{
           localStorage.removeItem("token");
           navigate(`/`);
         }}>
         Logout <AiOutlineLogout/>
-        </div>
+        </button>
       </div>
 			<h3 className="title">Flash-Card-App</h3>
       <Cardlist/>
