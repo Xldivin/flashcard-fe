@@ -29,7 +29,7 @@ const Driverlayout=({})=> {
           localStorage.removeItem("token");
           navigate(`/`);
         }}>
-        Logout <AiOutlineLogout/>
+        Logout
         </button>
       </div>
 			<h3 className="title">Flash-Card-App</h3>

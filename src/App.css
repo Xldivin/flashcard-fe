@@ -79,6 +79,7 @@ padding: 1rem;
   padding-left: 20px;
   padding-right: 20px;
   cursor: pointer;
+  width: 20rem;
 }
 .add{
   color: aliceblue;
@@ -86,6 +87,7 @@ padding: 1rem;
 .button-add{
   color: #FFF;
   text-decoration: none;
+  width: 15rem;
 }
 .link1{
   margin-left: 80rem;
@@ -99,12 +101,14 @@ padding: 1rem;
   padding-right: 20px;
   cursor: pointer;
   text-decoration: none;
+  width: 20rem;
 }
 .welcome{
   text-align: center;
   margin-top: 10em;
   font-size: 35px;
   color: #000;
+  margin-left: -90px;
 }
 .welcome2{
   display: flex;
@@ -112,6 +116,7 @@ padding: 1rem;
   flex-wrap: wrap;
   height: 80px;
   justify-content: space-between;
+  margin-left: -70px;
 }
 .button1{
   width: 10em;
@@ -143,7 +148,7 @@ padding: 1rem;
   background-color: #F5F5F5;
   width: 30em;
   height: 25em;
-  margin-left: 35em;
+  margin-left: 29em;
   margin-top: 15em;
   text-align: center;
 }
@@ -151,7 +156,7 @@ padding: 1rem;
   background-color: #F5F5F5;
   width: 30em;
   height: 33em;
-  margin-left: 35em;
+  margin-left: 29em;
   margin-top: 10em;
   text-align: center;
 }
@@ -236,7 +241,7 @@ color: #FFF;
   border-radius: 10%;
   width: 55em;
   text-align: center;
-  margin-left: 25em;
+  margin-left: 18em;
   margin-top: 10em;
   height: 30em;
 }
