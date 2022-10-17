@@ -1,7 +1,7 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql",
+  uri: "https://flashcard-bee-production.up.railway.app/",
 });
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists

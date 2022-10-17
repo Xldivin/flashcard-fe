@@ -22,14 +22,14 @@ mutation Delete($deleteId: Int!) {
 }
 `
 const UPDATE_CARD = gql`
-  mutation updateCard($id:Int!, $question: String!, $description: String!, $answer: String!) {
-    updateCard(id: $id, question: $question, description: $description, answer: $answer) {
-      id
-      question
-      description
-      answer  
-    }
+mutation Put($description: String!, $question: String!, $answer: String!, $putId: Int!) {
+  put(description: $description, question: $question, answer: $answer, id: $putId) {
+    id
+    description
+    question
+    answer
   }
+}
 `
 
 export {

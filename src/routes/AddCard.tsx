@@ -1,8 +1,10 @@
 import { ADD_CARD } from '../lib/cardMutation'
 import { useMutation } from "@apollo/client";
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function AddCard() {
+  const navigate = useNavigate();
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [description, setDescription] = useState("");
@@ -10,7 +12,7 @@ function AddCard() {
   const [saveCard, { error, data }] = useMutation(ADD_CARD, {
     variables: {description, question, answer}
   });
-  const handleSubmit =(e:any) =>{
+  const handleSubmit = async (e:any) =>{
     e.preventDefault();
     if (question === '' || description === '' || answer === '') {
       return alert('Please fill in all fields')
@@ -19,11 +21,15 @@ function AddCard() {
     setQuestion('')
     setDescription('')
     setAnswer('')
+    if(await error){
+      alert (JSON.stringify(error?.message)); 
+    }else{ 
+      alert("Added a card successfuly");
+      navigate("/cards")
+    }
   }
   return (
     <div>
-      {error ? <p>Oh no! {error.message}</p> : null}
-      {data && data.card ? <p>Saved!</p> : null}
             <form className='add-form' onSubmit={handleSubmit}>
             <h3 className='title-card'>Add Cards</h3>
             <input

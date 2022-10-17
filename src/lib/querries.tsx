@@ -1,14 +1,14 @@
 import { gql } from '@apollo/client';
 
 const GET_CARDS = gql`
-query getCards  {
-    allcards {
-      answer
-      id
-      description
-      question
-    }
+query Feed {
+  feed {
+    id
+    description
+    question
+    answer
   }
+}
 `
 
 const GET_CARD = gql`

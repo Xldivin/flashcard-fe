@@ -40,6 +40,7 @@ const handleSubmit=(e:any)=>{
       className='input2'
       placeholder='Enter Password'
       name="password"
+      type="password"
       value={password}
       onChange={(e) => setPassword(e.target.value)}
       />

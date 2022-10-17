@@ -13,7 +13,7 @@ const Cardlist = () => {
          <div className="card-grid">
         {
           //@ts-ignore
-          data.allcards.map((card) => {
+          data.feed.map((card) => {
             cardid= cardid+1
             return <Card card={card} key={card.id} cardid={cardid}/>;
           })
