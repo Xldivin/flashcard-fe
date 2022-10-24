@@ -48,6 +48,7 @@ function Signup() {
               <input
               className='input5'
               name="password"
+              type="password"
               placeholder='Enter Your Password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
